@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ShouldUseCrossCountry</key>
+	<false/>
+	<key>CrossCountryPurchasePrice</key>
+	<integer>0</integer>
+	<key>ShouldUseNextYearPercentage</key>
+	<false/>
+	<key>ShouldUseCard36MonthsIncentive</key>
+	<false/>
+	<key>ShouldUseCardUpgradeIncentive</key>
+	<false/>
+	<key>NextYearPercentageCard</key>
+	<integer>0</integer>
+	<key>NextYearPercentageOHF</key>
+	<integer>0</integer>
+	<key>NextYearPercentageMMF</key>
+	<integer>0</integer>
+</dict>
+</plist>

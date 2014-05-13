@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NFTAircraftTypeByProgram" representedClassName="NFTAircraftTypeByProgram" syncable="YES" dataClassName="NFTAircraftTypeByProgram">
+        <attribute name="aircraftType" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="aircraftTypeByProgramId" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="asapTurnTime" optional="YES" attributeType="Decimal" syncable="YES"/>
+        <attribute name="internationalTurnTime" optional="YES" attributeType="Decimal" syncable="YES"/>
+        <attribute name="lastChanged" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="minNonRevenueTurnTime" optional="YES" attributeType="Decimal" syncable="YES"/>
+        <attribute name="minRevenueTurnTime" optional="YES" attributeType="Decimal" syncable="YES"/>
+        <attribute name="programId" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="techTurnTime" optional="YES" attributeType="Decimal" syncable="YES"/>
+    </entity>
+    <entity name="NFTEnduranceEntry" representedClassName="NFTEnduranceEntry" syncable="YES" dataClassName="NFTEnduranceEntry">
+        <attribute name="aircraftType" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="endurance" attributeType="Decimal" syncable="YES"/>
+        <attribute name="enduranceEntryId" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="headwind" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="lastChanged" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="numberOfPax" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="range" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <entity name="NFTStageDistAndSpeed" representedClassName="NFTStageDistAndSpeed" syncable="YES" dataClassName="NFTStageDistAndSpeed">
+        <attribute name="aircraftType" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="averageSpeed" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="distance" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="lastChanged" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="stageDistAndSpeedId" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="NFTWindCorrections" representedClassName="NFTWindCorrections" syncable="YES" dataClassName="NFTWindCorrections">
+        <attribute name="lastChanged" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="latitude" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="springFallCorrection" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="summerCorrection" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="trueCourse" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="windCorrectionId" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="winterCorrection" attributeType="Integer 16" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="NFTEnduranceEntry" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="NFTStageDistAndSpeed" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="NFTWindCorrections" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="NFTAircraftTypeByProgram" positionX="160" positionY="192" width="128" height="180"/>
+    </elements>
+</model>

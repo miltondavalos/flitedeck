@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11A511" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AircraftCost" representedClassName="AircraftCost" syncable="YES">
+        <attribute name="last_updated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ohr_card" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ohr_demo" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ohr_share" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="typename" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="costToAC" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AircraftType" inverseName="costs" inverseEntity="AircraftType" syncable="YES"/>
+    </entity>
+    <entity name="AircraftType" representedClassName="AircraftType" syncable="YES">
+        <attribute name="aircraft_type_ranking_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="avg_fuel_burn_qty" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="cabin_size_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="flying_range_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="high_cruise_speed_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="hopsInFlight_" optional="YES" transient="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hoursInFlight_" optional="YES" transient="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="long_range_cruise_speed_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="max_flying_time_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="max_speed_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="min_runway_length_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="min_runway_width_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="operating_cost_amt" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="pax_seat_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="selectable_" optional="YES" transient="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="selectedAircraft_" optional="YES" transient="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sys_last_changed_by_user_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_version_nbr" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="type_full_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="typename" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="warnings" optional="YES" transient="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="costs" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="AircraftCost" inverseName="costToAC" inverseEntity="AircraftCost" syncable="YES"/>
+        <relationship name="media" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AircraftTypeMedia" inverseName="mediaToAC" inverseEntity="AircraftTypeMedia" syncable="YES"/>
+    </entity>
+    <entity name="AircraftTypeMedia" representedClassName="AircraftTypeMedia" syncable="YES">
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupSelector" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mimeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typename" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mediaToAC" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AircraftType" inverseName="media" inverseEntity="AircraftType" syncable="YES"/>
+    </entity>
+    <entity name="Airport" representedClassName="Airport" syncable="YES">
+        <attribute name="airport_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="airport_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="airport_zone_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="airportid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="closest_airportid" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="elevation_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="iata_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="icao_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="latitude_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longest_runway_length_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="state_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="timezone_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="fbo" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="FBO" inverseName="airportfbo" inverseEntity="FBO" syncable="YES"/>
+    </entity>
+    <entity name="FBO" representedClassName="FBO" syncable="YES">
+        <attribute name="airportid" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_ranking_qty" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="vendor_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="airportfbo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Airport" inverseName="fbo" inverseEntity="Airport" syncable="YES"/>
+        <relationship name="fboaddress" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FBOAddress" inverseName="fboAddressParent" inverseEntity="FBOAddress" syncable="YES"/>
+        <relationship name="fbophone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FBOPhone" inverseName="fboPhoneParent" inverseEntity="FBOPhone" syncable="YES"/>
+    </entity>
+    <entity name="FBOAddress" representedClassName="FBOAddress" syncable="YES">
+        <attribute name="address_desc" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line1_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line2_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line3_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line4_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line5_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="addressid" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="city_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="postal_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="state_province_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="fboAddressParent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FBO" inverseName="fboaddress" inverseEntity="FBO" syncable="YES"/>
+    </entity>
+    <entity name="FBOPhone" representedClassName="FBOPhone" syncable="YES">
+        <attribute name="area_code_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_code_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="phonetype" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="telephone_nbr_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="fboPhoneParent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FBO" inverseName="fbophone" inverseEntity="FBO" syncable="YES"/>
+    </entity>
+    <entity name="Program" representedClassName="Program" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Season" representedClassName="Season" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AircraftCost" positionX="709" positionY="207" width="128" height="135"/>
+        <element name="AircraftType" positionX="376" positionY="207" width="128" height="405"/>
+        <element name="AircraftTypeMedia" positionX="549" positionY="207" width="128" height="105"/>
+        <element name="Airport" positionX="-405" positionY="237" width="128" height="285"/>
+        <element name="FBO" positionX="-135" positionY="306" width="126" height="180"/>
+        <element name="FBOAddress" positionX="63" positionY="207" width="137" height="255"/>
+        <element name="FBOPhone" positionX="63" positionY="486" width="128" height="135"/>
+        <element name="Program" positionX="745" positionY="573" width="128" height="75"/>
+        <element name="Season" positionX="745" positionY="468" width="128" height="75"/>
+    </elements>
+</model>

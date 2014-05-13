@@ -1,0 +1,69 @@
+//
+// Prefix header for all source files of the 'FliteDeck' target in the 'FliteDeck' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+// project constants
+#define LEGACY_BASE_SERVICES_HOST_FOR_PRODUCTION @"flitedeck.netjets.com"
+#define BASE_SERVICES_HOST_FOR_PRODUCTION @"services.netjets.com"
+#define BASE_SERVICES_HOST_FOR_QA @"servicesqareg.netjets.com"
+#define BASE_SERVICES_HOST_FOR_ITG @"servicesdev.netjets.com"
+
+// standard imports (all classes)
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "NCLFramework.h"
+#endif
+
+// release config
+#ifdef RELEASE_CONFIG
+
+#define ALog(...) /* */
+#define DLog(...) /* */
+
+#define BASE_SERVICES_SECURE YES
+#define BASE_SERVICES_HOST BASE_SERVICES_HOST_FOR_PRODUCTION
+#define BASE_SERVICES_PORT 0 // Don't use 443 for https, Use 0 in which case the port will be left off completely.  The FDW Layer 7 config does not allow for a port to be specified and all envs go through https/443.
+
+#define SABRE_USER_ID @"EJAWEB"
+#define SABRE_USER_PASSWORD @"EJAWEB"
+#define SABRE_TRACKING_API_URL @"http://webservices.flightexplorer.com/FastTrack.asmx/GetFlightData"
+
+// all other config - use 'elif QA_CONFIG' and 'elif DEV_CONFIG' to separate DEV from QA
+#else
+
+#define NCL_DEBUG_LOG
+
+#define ALog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+//   #define DLog(__FORMAT__, ...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DLog(...) NSLog(__VA_ARGS__)
+
+
+#define BASE_SERVICES_HOST BASE_SERVICES_HOST_FOR_PRODUCTION
+//    #define BASE_SERVICES_SECURE NO
+//    #define BASE_SERVICES_HOST @"bdla6710"
+//    #define BASE_SERVICES_PORT 9083
+
+#define SABRE_USER_ID @"EJAWEB"
+#define SABRE_USER_PASSWORD @"EJAWEB"
+#define SABRE_TRACKING_API_URL @"http://webservices.flightexplorer.com/FastTrack.asmx/GetFlightData"
+
+#endif
+
+// color macros
+#define UIColorFromHex(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UIColorFromHexWithAlpha(rgbValue,a) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]

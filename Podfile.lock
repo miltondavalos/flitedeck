@@ -1,0 +1,31 @@
+PODS:
+  - HockeySDK (3.5.0)
+  - MMProgressHUD (0.2.1)
+  - NCLFramework (1.2.5):
+    - NCLFramework/no-arc
+  - NCLFramework/no-arc (1.2.5)
+  - TimesSquare (1.0.1)
+  - TTTAttributedLabel (1.8.0)
+
+DEPENDENCIES:
+  - HockeySDK (= 3.5.0)
+  - MMProgressHUD (= 0.2.1)
+  - NCLFramework (from `http://stash.netjets.com/scm/mobile/ios-common-library.git`, tag `1.2.5`)
+  - TimesSquare (from `https://github.com/square/objc-TimesSquare.git`)
+  - TTTAttributedLabel
+
+EXTERNAL SOURCES:
+  NCLFramework:
+    :git: http://stash.netjets.com/scm/mobile/ios-common-library.git
+    :tag: 1.2.5
+  TimesSquare:
+    :git: https://github.com/square/objc-TimesSquare.git
+
+SPEC CHECKSUMS:
+  HockeySDK: 685e6ca0b78668ef8b595fba17fe087ea6074b05
+  MMProgressHUD: f06dddddbf9345e60618f2fac6375f31a10965db
+  NCLFramework: 64afcf0f2039ebe2868781712250fdf26feec93c
+  TimesSquare: 5caa2f4b53e350d085adcfe560ab3a741b1c8934
+  TTTAttributedLabel: cc759a194a485c1fdf2446bf2ee7a55bada1f08d
+
+COCOAPODS: 0.26.2

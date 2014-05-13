@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NFDCalendarDatePickerViewController">
+            <connections>
+                <outlet property="calendarNavBar" destination="gvL-A1-ZjO" id="C7F-LC-clH"/>
+                <outlet property="calendarView" destination="gyK-sW-drm" id="LMG-Ua-4WK"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvL-A1-ZjO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Select Date" id="k8H-1k-lZ0">
+                            <barButtonItem key="leftBarButtonItem" title="Today" style="plain" id="9Ch-yf-veO">
+                                <connections>
+                                    <action selector="todayTapped:" destination="-1" id="zal-zt-fTp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Done" id="Ead-O2-Zd4">
+                                <connections>
+                                    <action selector="doneTapped:" destination="-1" id="qix-PN-lJb"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-sW-drm" customClass="TSQCalendarView">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gvL-A1-ZjO" firstAttribute="top" secondItem="1" secondAttribute="top" id="AJK-5Y-AEV"/>
+                <constraint firstAttribute="trailing" secondItem="gyK-sW-drm" secondAttribute="trailing" id="LBN-ny-ISI"/>
+                <constraint firstItem="gyK-sW-drm" firstAttribute="top" secondItem="gvL-A1-ZjO" secondAttribute="bottom" id="M1i-vQ-d20"/>
+                <constraint firstItem="gvL-A1-ZjO" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Ub6-pj-KMu"/>
+                <constraint firstItem="gvL-A1-ZjO" firstAttribute="centerX" secondItem="gyK-sW-drm" secondAttribute="centerX" id="WKT-ht-yUU"/>
+                <constraint firstItem="gyK-sW-drm" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="noz-Vo-V3H"/>
+                <constraint firstAttribute="bottom" secondItem="gyK-sW-drm" secondAttribute="bottom" id="wCp-Mr-Yx1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

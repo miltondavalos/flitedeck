@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Account" representedClassName="NDFAccount" syncable="YES">
+        <attribute name="account_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="account_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AircraftInventory" representedClassName="NFDAircraftInventory" syncable="YES">
+        <attribute name="anticipated_delivery_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="contracts_until_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="legal_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sales_value" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="share_immediately_available" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AircraftType" representedClassName="NFDAircraftType" syncable="YES">
+        <attribute name="cabinSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="highCruiseSpeed" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="maxFlyingTime" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="minRunwayLength" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfPax" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="typeFullName" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="typeGroupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeName" attributeType="String" defaultValueString="N/A" indexed="YES" syncable="YES"/>
+        <relationship name="contractRate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContractRate" inverseName="aircraftTypes" inverseEntity="ContractRate" syncable="YES"/>
+        <relationship name="fuelRate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FuelRate" inverseName="aircraftType" inverseEntity="FuelRate" syncable="YES"/>
+    </entity>
+    <entity name="AircraftTypeGroup" representedClassName="NFDAircraftTypeGroup" syncable="YES" dataClassName="AircraftTypeGroup">
+        <attribute name="acPerformanceTypeName" attributeType="String" syncable="YES"/>
+        <attribute name="baggageCapacity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cabinHeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cabinWidth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="highCruiseSpeed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfPax" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="range" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeGroupName" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="warnings" optional="YES" transient="YES" attributeType="Transformable" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="AircraftTypeRestriction" representedClassName="NFDAircraftTypeRestriction" syncable="YES">
+        <attribute name="aircraftRestrictionID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="airportID" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="approvalStatusID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isForLanding" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="isForTakeoff" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="restrictionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeName" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+    </entity>
+    <entity name="Airport" representedClassName="NFDAirport" syncable="YES">
+        <attribute name="airport_name" attributeType="String" defaultValueString="N/A" indexed="YES" syncable="YES"/>
+        <attribute name="airportid" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="city_name" optional="YES" attributeType="String" defaultValueString="N/A" indexed="YES" syncable="YES"/>
+        <attribute name="closest_airportid" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="customs_available" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="elevation_qty" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fuel_available" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="iata_cd" optional="YES" attributeType="String" defaultValueString="N/A" indexed="YES" syncable="YES"/>
+        <attribute name="instrument_approach_flag" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="latitude_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="longest_runway_length_qty" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude_qty" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="slots_required" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="state_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="timezone_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+    </entity>
+    <entity name="Company" representedClassName="NFDCompany" syncable="YES">
+        <attribute name="company_id" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="competitive_analysis" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="general_info" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ContractRate" representedClassName="NFDContractRate" syncable="YES" dataClassName="ContractRate">
+        <attribute name="acquisitionCost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="californiaFee" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cardHalfPremium" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cardPurchase25Hour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cardPurchase50Hour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="demoOccupiedHourlyFee" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lease12MonthFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lease24MonthFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lease36MonthFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lease48MonthFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lease60MonthFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="leaseMonthlyMgmtFee" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="leaseOccupiedHourlyFee" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareMonthlyMgmtFee" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="shareMonthlyMgmtFeeAccel1" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareMonthlyMgmtFeePremium" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareOccupiedHourlyFee" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="shareOccupiedHourlyFeeAccel1" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareOccupiedHourlyFeeAccel2" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareOccupiedHourlyFeeAccel3" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="typeGroupName" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="aircraftTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AircraftType" inverseName="contractRate" inverseEntity="AircraftType" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="EventInformation" representedClassName="NFDEventInformation" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="end_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="event_description" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="event_id" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="media" optional="YES" transient="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="start_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+    </entity>
+    <entity name="EventMedia" representedClassName="NFDEventMedia" syncable="YES">
+        <attribute name="event_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupSelector" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mimeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typename" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FBO" representedClassName="NFDFBO" syncable="YES">
+        <attribute name="airportid" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="fbo_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="fbo_ranking_qty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="summer_operating_hour_desc" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="vendor_name" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="winter_operating_hour_desc" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fboaddress" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FBOAddress" inverseName="fboAddressParent" inverseEntity="FBOAddress" syncable="YES"/>
+        <relationship name="fbophone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FBOPhone" inverseName="fboPhoneParent" inverseEntity="FBOPhone" syncable="YES"/>
+    </entity>
+    <entity name="FBOAddress" representedClassName="NFDFBOAddress" syncable="YES">
+        <attribute name="address_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="address_line1_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line2_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line3_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line4_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="address_line5_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="city_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="postal_cd" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="state_province_name" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="fboAddressParent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FBO" inverseName="fboaddress" inverseEntity="FBO" syncable="YES"/>
+    </entity>
+    <entity name="FBOPhone" representedClassName="NFDFBOPhone" syncable="YES">
+        <attribute name="area_code_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="country_code_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="fbo_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="sys_last_changed_ts" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="N/A" syncable="YES"/>
+        <attribute name="telephone_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="telephone_nbr_txt" optional="YES" attributeType="String" defaultValueString="N/A" syncable="YES"/>
+        <relationship name="fboPhoneParent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FBO" inverseName="fbophone" inverseEntity="FBO" syncable="YES"/>
+    </entity>
+    <entity name="FuelRate" representedClassName="NFDFuelRate" syncable="YES">
+        <attribute name="nonQualified1MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nonQualified3MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nonQualified6MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nonQualified12MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="qualified1MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="qualified3MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="qualified6MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="qualified12MonthRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="typeName" attributeType="String" defaultValueString="N/A" indexed="YES" syncable="YES"/>
+        <relationship name="aircraftType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AircraftType" inverseName="fuelRate" inverseEntity="AircraftType" syncable="YES"/>
+    </entity>
+    <entity name="MasterAircraftType" representedClassName="NFDMasterAircraftType" parentEntity="AircraftType" syncable="YES">
+        <attribute name="typeGroupNameForNJA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeGroupNameForNJE" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MasterAircraftTypeGroup" representedClassName="NFDMasterAircraftTypeGroup" parentEntity="AircraftTypeGroup" syncable="YES">
+        <attribute name="typeGroupNameForNJA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeGroupNameForNJE" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MasterContractRate" representedClassName="NFDMasterContractRate" parentEntity="ContractRate" syncable="YES">
+        <attribute name="companyID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MasterFuelRate" representedClassName="NFDMasterFuelRate" parentEntity="FuelRate" syncable="YES">
+        <attribute name="companyID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PositioningMatrix" representedClassName="NFDPositioningMatrix" syncable="YES">
+        <attribute name="accost" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="acname" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="acpassengers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="acrange" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="acshortname" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="acspeed" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="cabintype" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="comparableac" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="detailslink" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="fleetname" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="typename" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="117" positionY="1125" width="128" height="75"/>
+        <element name="AircraftInventory" positionX="-56" positionY="-243" width="128" height="180"/>
+        <element name="AircraftType" positionX="-47" positionY="18" width="128" height="240"/>
+        <element name="AircraftTypeGroup" positionX="-254" positionY="18" width="128" height="210"/>
+        <element name="AircraftTypeRestriction" positionX="153" positionY="843" width="128" height="165"/>
+        <element name="Airport" positionX="-272" positionY="516" width="128" height="285"/>
+        <element name="Company" positionX="279" positionY="1125" width="128" height="120"/>
+        <element name="ContractRate" positionX="196" positionY="-243" width="128" height="375"/>
+        <element name="EventInformation" positionX="-81" positionY="1124" width="128" height="163"/>
+        <element name="EventMedia" positionX="-270" positionY="1122" width="128" height="120"/>
+        <element name="FBO" positionX="-270" positionY="846" width="128" height="180"/>
+        <element name="FBOAddress" positionX="-9" positionY="669" width="128" height="240"/>
+        <element name="FBOPhone" positionX="-11" positionY="930" width="128" height="150"/>
+        <element name="FuelRate" positionX="198" positionY="288" width="128" height="195"/>
+        <element name="PositioningMatrix" positionX="430" positionY="1125" width="128" height="210"/>
+        <element name="MasterAircraftTypeGroup" positionX="-261" positionY="270" width="144" height="73"/>
+        <element name="MasterAircraftType" positionX="-47" positionY="299" width="128" height="73"/>
+        <element name="MasterContractRate" positionX="198" positionY="189" width="128" height="58"/>
+        <element name="MasterFuelRate" positionX="198" positionY="558" width="128" height="58"/>
+    </elements>
+</model>

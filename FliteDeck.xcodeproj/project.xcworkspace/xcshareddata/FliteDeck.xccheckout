@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F6D1A096-73DD-42E2-92AD-5040127552CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FliteDeck</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E62C9728-4D51-44F5-A36C-3F21FF37F0DD</key>
+		<string>http://stash.netjets.com/scm/cussal/flitedeck-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FliteDeck.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E62C9728-4D51-44F5-A36C-3F21FF37F0DD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://stash.netjets.com/scm/cussal/flitedeck-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E62C9728-4D51-44F5-A36C-3F21FF37F0DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E62C9728-4D51-44F5-A36C-3F21FF37F0DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlightDeck</string>
+		</dict>
+	</array>
+</dict>
+</plist>

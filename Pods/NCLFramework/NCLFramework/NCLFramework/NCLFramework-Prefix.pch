@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'NCLFramework' target in the 'NCLFramework' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+#define INFOLog(...) { if ([NCLFramework logLevel] > 1) NSLog(__VA_ARGS__); }
+#define DEBUGLog(...) { if ([NCLFramework logLevel] > 2) NSLog(__VA_ARGS__); }
+#define TRACELog(...) { if ([NCLFramework logLevel] > 3) NSLog(__VA_ARGS__); }

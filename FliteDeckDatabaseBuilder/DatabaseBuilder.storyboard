@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="RPt-X5-XFk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Data Builder Root View Controller-->
+        <scene sceneID="B2y-ct-P60">
+            <objects>
+                <viewController id="RPt-X5-XFk" customClass="NDFDataBuilderRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tEj-lR-pAW"/>
+                        <viewControllerLayoutGuide type="bottom" id="y4z-I3-mef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qyz-Fr-5uY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightDeck Database Builder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atm-1a-f6S">
+                                <rect key="frame" x="196" y="79" width="376" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Tg0-Dy-uzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightDeck Database Builder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-bf-TQ2">
+                                <rect key="frame" x="196" y="79" width="376" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KKz-ai-y5F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Errors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgm-N1-vv0">
+                                <rect key="frame" x="351" y="181" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kZ0-hG-4Mb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Warnings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-ST-uXv">
+                                <rect key="frame" x="332" y="267" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fHb-Oy-x1g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJV-tx-xvh">
+                                <rect key="frame" x="363" y="313" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="x4R-oW-gdb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iq-Se-thp">
+                                <rect key="frame" x="363" y="227" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Hww-6O-mbt"/>
+                                    <constraint firstAttribute="width" constant="42" id="mQc-9b-ckC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-eK-5NM">
+                                <rect key="frame" x="134" y="396" width="500" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="0ji-Mc-c64"/>
+                                </constraints>
+                                <string key="text">After reviewing any errors and warning in the console, copy .sqlite file from the FlightDeckDataBuilder Simulator Directory and replace the existing sqlite file in FlightDeck source folder. Double check that the sqlite file is included in the Copy Bundle Resources list for FlightDeck.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MDC-AC-2ye">
+                                <rect key="frame" x="366" y="305" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4YP-X2-vNc">
+                                <rect key="frame" x="366" y="219" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cO6-cu-MwH">
+                                <rect key="frame" x="210" y="42" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Flite Deck"/>
+                                    <segment title="Flite And Trip Time"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchDb:" destination="RPt-X5-XFk" eventType="valueChanged" id="DgM-Kv-eXq"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5Q-aZ-sF1">
+                                <rect key="frame" x="475" y="41" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Import">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startActivityIndicators:" destination="RPt-X5-XFk" eventType="touchDown" id="e42-ZW-ZtG"/>
+                                    <action selector="startImport:" destination="RPt-X5-XFk" eventType="touchUpInside" id="uNl-35-5fF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FliteDeck.sqlite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-3A-HQd">
+                                <rect key="frame" x="283" y="129" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="AYe-FD-2YA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83254076086956519" green="0.83254076086956519" blue="0.83254076086956519" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9iq-Se-thp" firstAttribute="leading" secondItem="vJV-tx-xvh" secondAttribute="leading" id="1Da-VN-AbZ"/>
+                            <constraint firstItem="pcW-3A-HQd" firstAttribute="centerX" secondItem="atm-1a-f6S" secondAttribute="centerX" id="3Mj-lZ-fAg"/>
+                            <constraint firstItem="7ov-bf-TQ2" firstAttribute="baseline" secondItem="atm-1a-f6S" secondAttribute="baseline" id="7hV-46-SfD"/>
+                            <constraint firstItem="7ov-bf-TQ2" firstAttribute="leading" secondItem="atm-1a-f6S" secondAttribute="leading" id="82k-Gu-jhO"/>
+                            <constraint firstItem="y4z-I3-mef" firstAttribute="top" secondItem="PEA-eK-5NM" secondAttribute="bottom" constant="460" id="8I1-Vl-wfw"/>
+                            <constraint firstItem="9iq-Se-thp" firstAttribute="centerX" secondItem="mgm-N1-vv0" secondAttribute="centerX" id="8xD-7v-gXh"/>
+                            <constraint firstItem="4YP-X2-vNc" firstAttribute="centerX" secondItem="9iq-Se-thp" secondAttribute="centerX" id="CGh-aK-xTj"/>
+                            <constraint firstItem="PEA-eK-5NM" firstAttribute="top" secondItem="MDC-AC-2ye" secondAttribute="bottom" constant="84" id="DrR-Ok-5Z9"/>
+                            <constraint firstItem="PEA-eK-5NM" firstAttribute="centerX" secondItem="vJV-tx-xvh" secondAttribute="centerX" id="EeK-1f-Kam"/>
+                            <constraint firstItem="cO6-cu-MwH" firstAttribute="leading" secondItem="Qyz-Fr-5uY" secondAttribute="leading" constant="210" id="Gx4-HC-QHY"/>
+                            <constraint firstItem="4YP-X2-vNc" firstAttribute="centerY" secondItem="9iq-Se-thp" secondAttribute="centerY" id="HbQ-dk-NVc"/>
+                            <constraint firstItem="7ov-bf-TQ2" firstAttribute="top" secondItem="V5Q-aZ-sF1" secondAttribute="bottom" constant="8" symbolic="YES" id="Hi9-Md-8af"/>
+                            <constraint firstItem="pcW-3A-HQd" firstAttribute="top" secondItem="7ov-bf-TQ2" secondAttribute="bottom" constant="14" id="IPs-Ji-1sI"/>
+                            <constraint firstItem="mgm-N1-vv0" firstAttribute="top" secondItem="atm-1a-f6S" secondAttribute="bottom" constant="36" id="KMU-tE-0YV"/>
+                            <constraint firstItem="V5Q-aZ-sF1" firstAttribute="leading" secondItem="cO6-cu-MwH" secondAttribute="trailing" constant="10" id="P75-fg-q8G"/>
+                            <constraint firstItem="atm-1a-f6S" firstAttribute="top" secondItem="tEj-lR-pAW" secondAttribute="bottom" constant="59" id="X5W-Lk-7i8"/>
+                            <constraint firstItem="YeX-ST-uXv" firstAttribute="top" secondItem="4YP-X2-vNc" secondAttribute="bottom" constant="11" id="cJd-AV-TIj"/>
+                            <constraint firstItem="vJV-tx-xvh" firstAttribute="centerY" secondItem="MDC-AC-2ye" secondAttribute="centerY" id="dgn-kt-OCE"/>
+                            <constraint firstItem="MDC-AC-2ye" firstAttribute="top" secondItem="YeX-ST-uXv" secondAttribute="bottom" constant="8" symbolic="YES" id="gSl-Xk-zbg"/>
+                            <constraint firstItem="atm-1a-f6S" firstAttribute="centerX" secondItem="Qyz-Fr-5uY" secondAttribute="centerX" id="hN5-qp-o6g"/>
+                            <constraint firstItem="4YP-X2-vNc" firstAttribute="top" secondItem="mgm-N1-vv0" secondAttribute="bottom" constant="8" symbolic="YES" id="iwQ-0t-MUb"/>
+                            <constraint firstItem="V5Q-aZ-sF1" firstAttribute="centerY" secondItem="cO6-cu-MwH" secondAttribute="centerY" id="kOq-Fc-6ad"/>
+                            <constraint firstItem="vJV-tx-xvh" firstAttribute="centerX" secondItem="YeX-ST-uXv" secondAttribute="centerX" id="nzA-VD-V65"/>
+                            <constraint firstItem="mgm-N1-vv0" firstAttribute="centerX" secondItem="atm-1a-f6S" secondAttribute="centerX" id="p1u-NY-StD"/>
+                            <constraint firstItem="MDC-AC-2ye" firstAttribute="leading" secondItem="4YP-X2-vNc" secondAttribute="leading" id="su2-b9-5Yq"/>
+                            <constraint firstItem="9iq-Se-thp" firstAttribute="trailing" secondItem="vJV-tx-xvh" secondAttribute="trailing" id="vmx-Pq-gzh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dbNameLabel" destination="pcW-3A-HQd" id="VR0-XA-p23"/>
+                        <outlet property="numErrorsActivityIndicator" destination="MDC-AC-2ye" id="aOa-g0-22H"/>
+                        <outlet property="numErrorsLabel" destination="9iq-Se-thp" id="IS1-cB-1W3"/>
+                        <outlet property="numWarningsActivityIndicator" destination="4YP-X2-vNc" id="pwf-5L-sLc"/>
+                        <outlet property="numWarningsLabel" destination="vJV-tx-xvh" id="MZJ-ve-6Rj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyT-rl-MEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="-31"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,5 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/HockeySDK/Vendor"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 $(inherited) BITHOCKEY_VERSION="@\"3.5.0\""
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/HockeySDK" "${PODS_ROOT}/Headers/MMProgressHUD" "${PODS_ROOT}/Headers/NCLFramework" "${PODS_ROOT}/Headers/TTTAttributedLabel" "${PODS_ROOT}/Headers/TimesSquare"
+OTHER_LDFLAGS = -ObjC -framework AudioToolbox -framework CoreData -framework CoreGraphics -framework CoreText -framework CrashReporter -framework Foundation -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
+PODS_ROOT = ${SRCROOT}/Pods

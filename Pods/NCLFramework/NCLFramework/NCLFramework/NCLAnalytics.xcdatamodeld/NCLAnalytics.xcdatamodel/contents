@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="action" attributeType="String" syncable="YES"/>
+        <attribute name="component" attributeType="String" syncable="YES"/>
+        <attribute name="createdTS" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="elapsedTime" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="errorCode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="transactionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventDetail" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EventDetail" inverseName="event" inverseEntity="EventDetail" syncable="YES"/>
+    </entity>
+    <entity name="EventDetail" representedClassName="EventDetail" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="eventDetail" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="EventDetail" positionX="369" positionY="315" width="128" height="90"/>
+    </elements>
+</model>
